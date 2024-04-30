@@ -1,5 +1,5 @@
 html{
-    font-family: Lato, sans-serif;
+    font-family:  Lato, sans-serif;
 }
 
 *, *::after, *::before{
@@ -97,6 +97,9 @@ body{
 
 .entry{
     margin-top: 1px;
+    padding: 6px;
+    border: 2px solid #000000;
+    border-radius: 5px;
 }
 
 .entry__title{
@@ -106,6 +109,7 @@ body{
 
 .entry__date{
     color: #5c6b70;
+    justify-content:flex-end;
 }
 
 .entry__content{

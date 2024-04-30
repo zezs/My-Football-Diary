@@ -23,9 +23,10 @@
         <!-- displaying input section -->
         <section>
             <h1>Add a new story</h1>
-            <form class="form" action="/entry" method="POST">
+            <form class="form" action="/" method="POST">
                 <p class="form__input">
                 <label class ="form__label" for="sample-field">What's on your mind:</label>
+                <input type="text" name="title" id="sample-field">
                 <textarea class="form__textarea" name="content" id="sample-field" cols="30" rows="10">
 
                 </textarea>
@@ -38,16 +39,18 @@
         <!-- dispalying posts -->
         <section>
             <h1>Recent posts</h1>
+            
+            {% for entry in entries: %}
             <article class="entry">
                 <div>
-                    <h2 class="entry__title">A bit of Chill day today</h2>
-                    <time class="entry__date" datetime="04-04-2024">(April 4)</time>
+                    <h2 class="entry__title">{{entry[0]}}</h2>
+                    <time class="entry__date" datetime="04-04-2024">{{entry[2]}}</time>
                 </div>
                 <p class="entry__content">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo illum maiores magni deleniti, earum voluptas recusandae similique reiciendis asperiores expedita ratione, debitis dolorum nulla architecto porro quidem. Labore, reiciendis iste?
-                    Hic explicabo consectetur ratione sint excepturi totam alias odio cum fuga corporis, animi voluptatum! Natus exercitationem quasi autem explicabo ea, vitae quam sed consequuntur maiores nihil iusto! Asperiores, sapiente nihil.
+                    {{entry[1]}}
                 </p>
             </article>
+            {% endfor %}
         </section>
     </main>
 
