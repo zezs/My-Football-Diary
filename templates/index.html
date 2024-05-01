@@ -22,12 +22,12 @@
         
         <!-- displaying input section -->
         <section>
-            <h1>Add a new story</h1>
+            <h1 style="text-align: center;">What's on your mind</h1>
             <form class="form" action="/" method="POST">
                 <p class="form__input">
-                <label class ="form__label" for="sample-field">What's on your mind:</label>
-                <input type="text" name="title" id="sample-field">
-                <textarea class="form__textarea" name="content" id="sample-field" cols="30" rows="10">
+                <!-- <label class ="form__label" for="sample-field">What's on your mind:</label> -->
+                <input class="form__title" type="text" name="title" id="sample-field" placeholder="Title">
+                <textarea class="form__textarea" name="content" id="sample-field" cols="30" rows="10" placeholder="content">
 
                 </textarea>
                 </p>
@@ -38,7 +38,7 @@
 
         <!-- dispalying posts -->
         <section>
-            <h1>Recent posts</h1>
+            <h1 style="text-align: center;">Recent posts</h1>
             
             {% for entry in entries: %}
             <article class="entry">
@@ -49,6 +49,12 @@
                 <p class="entry__content">
                     {{entry[1]}}
                 </p>
+                <form class="form" action="/" method="POST">
+                    <button type="submit" class="entry_update">Update</button>
+                </form>
+                <form class="form" action="/" method="POST">
+                    <button type="submit" class="entry_delete">Delete</button>
+                </form>
             </article>
             {% endfor %}
         </section>

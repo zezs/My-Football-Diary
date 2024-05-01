@@ -11,8 +11,8 @@ body{
 }
 
 .navbar{
-  max-width: 640px;
-  margin: 50px auto;
+  max-width: 1840px;
+  margin:  auto;
   padding: 0 20px;
   display: flex;
   flex-direction: row;
@@ -70,6 +70,14 @@ body{
     display: block;
     margin-bottom: 10px;
 }
+.form__title{
+    width: inherit;
+    font-size: 18px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-color: #f3f6f6;
+    margin-bottom: 10px;
+}
 
 .form__textarea{
     width: inherit;
@@ -89,6 +97,34 @@ body{
     border-radius: 20px;
     color: white;
     cursor: pointer;
+   
+}
+
+.entry_delete{
+    background-color: #ec502d;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 30px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    display: inline;
+    
+}
+
+.entry_update{
+    background-color: #74d457;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 30px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    cursor: pointer;
+    display: inline;
+    margin: 3px;
 }
 
 .form__submit:hover{
